@@ -1,0 +1,13 @@
+github:
+  clientId:
+  clientSecret:
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?characterEncoding=utf8
+    username: cost_mng
+    password: secret
+    driver-class-name: com.mysql.jdbc.Driver
+
+client:
+  url: http://localhost:63342
