@@ -1,22 +1,27 @@
 package jp.ac.tama.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import jp.ac.tama.DAO.dao;
 /**
  * Created by kajiwarayutaka on 2017/07/10.
  */
-@Controller
+@RestController
 @RequestMapping("/")
 public class SiginController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    @ResponseBody
-    public String index(){
+    @Autowired
+    private dao dao;
 
+    @RequestMapping(method = RequestMethod.PUT)
+    @ResponseBody
+    public String index(@RequestBody Integer cost){
+        System.out.println(cost);
+        dao.insertUser(cost);
         return "サインインの処理を実装していきます。";
     }
+
 
 }

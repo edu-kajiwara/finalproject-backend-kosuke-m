@@ -10,4 +10,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 client:
-  url: http://localhost:63342
+  url: http://localhost:3000
